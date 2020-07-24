@@ -1,0 +1,12 @@
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.address %></p>
+
+<%= link_to "Edit Restaurant", edit_restaurant_path %>
+<hr>
+
+
+<% @restaurant.pizzas.each do |pizza| %>
+
+    <%= link_to "#{pizza.name} Pizza", pizza %><br><br>
+
+<% end %>

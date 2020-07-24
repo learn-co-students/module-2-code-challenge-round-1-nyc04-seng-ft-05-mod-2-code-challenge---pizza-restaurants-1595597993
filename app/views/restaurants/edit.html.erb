@@ -1,0 +1,19 @@
+<%= form_for @restaurant do |f| %>
+
+    <% if @restaurant.errors.any? %>
+        <% @restaurant.errors.full_messages do |message| %>
+            <p><%= message %></p>
+        <% end %>
+    <% end %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %><br>
+
+    <%= f.collection_check_boxes :pizza_ids, Pizza.all, :id, :name %>
+
+    <%= f.submit %>
+
+<% end %>
