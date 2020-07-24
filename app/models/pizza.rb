@@ -3,4 +3,5 @@ class Pizza < ApplicationRecord
     has_many :restaurants, through: :restaurant_pizzas
     validates :name, presence: true
     validates :ingredients, presence: true
+    validates :name, uniqueness: true
 end
