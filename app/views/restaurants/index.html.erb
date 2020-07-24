@@ -5,4 +5,6 @@
       <%= restaurant.name %>
   </h1>
   <p>Address: <%= restaurant.address %></p>
+  <%= link_to "show", restaurant_path(restaurant) %>
+
 <% end %>
