@@ -1,0 +1,14 @@
+
+<h1>Restaurant: </h1> <h1><%=@restaurant.name%></h1>
+<br>
+<h2>Address: </h2> <h2><%=@restaurant.address%></h2>
+<br>
+<hr>
+<h1>List of Pizzas!</h1>
+
+<ul>
+<% Pizza.all.each do |pizza| %>
+<l1><%= link_to pizza.name %><br></li>
+<% end %>
+</ul>
+
