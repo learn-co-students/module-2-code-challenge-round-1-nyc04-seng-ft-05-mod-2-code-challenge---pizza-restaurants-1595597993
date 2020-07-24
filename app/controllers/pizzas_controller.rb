@@ -1,9 +1,8 @@
 class PizzasController < ApplicationController
-  before_action :set_pizza, only: [:show, :create]
+  before_action :set_pizza, only: [:show]
   def index
     @pizzas = Pizza.all
   end
-  
  
   def new
     @pizza = Pizza.new
@@ -25,10 +24,13 @@ class PizzasController < ApplicationController
 
   private
   def set_pizza
+    byebug
     @pizza = Pizza.find(params[:id])
+    # why am i getting a nill id
   end
+  
   def set_params
-    params.require(:pizza).permit(params[:id,:name,:ingredients])
+    params.require(:pizza).permit(:name, :ingredients)
   end
 
 end
