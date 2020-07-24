@@ -1,20 +1,21 @@
 class RestaurantsController < ApplicationController
+  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   def index
     @restaurants = Restaurant.all
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
-    byebug
   end
 
   def new
     @restaurant = Restaurant.new
   end
 
-  def create
+  def edit
+  end
 
+  def create
     @restaurant = Restaurant.new(restaurant_params)
 
     respond_to do |format|
@@ -27,13 +28,20 @@ class RestaurantsController < ApplicationController
   end
 
   def update
+
     respond_to do |format|
+
+      byebug
       if @restaurant.update(restaurant_params)
+      byebug
         format.html { redirect_to @restaurant, notice: 'restaurant was successfully updated.' }
       else
+      byebug
         format.html { render :edit }
       end
+
     end
+
   end
 
   def destroy
@@ -45,11 +53,11 @@ class RestaurantsController < ApplicationController
 
   private
     def set_restaurant
-      @restaurant = restaurant.find(params[:id])
+      @restaurant = Restaurant.find(params[:id])
     end
 
     def restaurant_params
-      params.require(:restaurant).permit(:name, :address)
+      params.require(:restaurant).permit(:name, :address, :pizza_ids)
     end
 
 end

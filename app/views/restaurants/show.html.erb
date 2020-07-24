@@ -3,7 +3,7 @@
 <hr>
 <ul>
     <% @restaurant.pizzas.each do |pizza_instance| %>
-        <li><%= pizza_instance.name %></li>
+        <li><%= link_to pizza_instance.name, pizza_instance %></li>
     <% end %>
 </ul>
 <hr>
