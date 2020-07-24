@@ -1,0 +1,12 @@
+<h1>Make a Pizza</h1>
+
+<%= form_for @pizza do |f|%>
+<%= f.label :name%>
+<%= f.text_field :name%>
+<%= f.label :ingredients%>
+<%= f.text_field :ingredients%>
+<%= f.label :restaurant.name%>
+<%= f.collection_select :restaurants.id, restaurants.all, :id, :name  %>
+
+<%= button_to "Save", pizzas_path(@pizza.id)%>
+<%end%>
