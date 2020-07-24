@@ -1,0 +1,9 @@
+<h1><%= @restaurant.name %> </h1>
+<strong>Address: </strong> <%= @restaurant.address %>
+<hr>
+<strong>🍕Pizzas🍕</strong
+<ul>
+    <% @restaurant.pizzas.each do |pizza_instance| %>
+        <li><%=link_to pizza_instance.name, pizza_instance%></li>
+    <% end %>
+</ul>
