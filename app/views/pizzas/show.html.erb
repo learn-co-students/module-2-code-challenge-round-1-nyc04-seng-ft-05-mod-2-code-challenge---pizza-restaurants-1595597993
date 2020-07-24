@@ -1,0 +1,10 @@
+<hr>
+<h1>Pizza: <%= @pizza.name%></h1>
+<hr>
+ <% @pizza.list_ingredients.each do |ing| %>
+ <ul>
+    <li><%= ing %></li>
+ </ul>
+    
+ <% end %>
+    
