@@ -1,4 +1,10 @@
 
+<% if @pizza.errors.any? %>
+  <% @pizza.errors.full_messages.each do |message|%>\
+     <h3><%= message %> </h3>
+  <%end%>
+<%end%>
+
 <%= form_with model: @pizza do |f|%>
 <%= f.label :name %>
 <%= f.text_field :name%>

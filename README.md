@@ -89,24 +89,24 @@ Each Restaurant can have many Pizzas. Each Pizza can belong to multiple Restaura
 
 ### 6. Pizza Validation
 
-Add validations to the Pizza model so that each pizza must have:
+<!-- Add validations to the Pizza model so that each pizza must have:
 
 - a name
-- ingredients
+- ingredients -->
 
 Add error handling to the Pizza create action. Show any validation errors on the Pizza creation form if the user attempts to save an invalid Pizza.
 
 ### 7. Advanced: Pizza Validation
 
-Pizzas should not have the same name.
+<!-- Pizzas should not have the same name. -->
 
-Add a validation to prevent this.
+<!-- Add a validation to prevent this. -->
 
 Update the error handling and error display so that this error shows on the Pizza creation form.
 
 ### 8. Advanced: Display Count of Restaurants on Pizza Index Page
 
-On the Pizza index page, display the number of Restaurants that have that Pizza next to each Pizza's name.
+<!-- On the Pizza index page, display the number of Restaurants that have that Pizza next to each Pizza's name. -->
 
 ### 9. Advanced: Restaurant Update Form to Link Multiple Pizzas
 

@@ -13,7 +13,12 @@ class PizzasController < ApplicationController
 
   def create
     @pizza = Pizza.create(pizza_params)
-    redirect_to pizza_path(@pizza)
+      if @pizza.valid? 
+        redirect_to pizza_path(@pizza)
+      else 
+        render :new
+      end
+   
   end
 
 private
