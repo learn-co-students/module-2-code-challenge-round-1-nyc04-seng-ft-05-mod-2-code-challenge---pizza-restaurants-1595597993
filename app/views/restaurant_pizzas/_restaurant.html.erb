@@ -1,0 +1,12 @@
+<h1> Add Pizza to Restaurant </h1>
+
+<% form_for restaurant do |f| %>
+  <%= f.label :restaurant_id %>
+  <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
+  
+  <%= f.label :pizza_id %>
+    <%= f.collection_check_boxes :pizza_id, Pizza.all, :id, :name do |pizza| %>
+      <%= pizza.label(class: "checkbox-inline") { pizza.check_box + pizza.text } %>
+    <% end %>
+  <%= f.submit %>
+<% end %>
