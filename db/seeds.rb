@@ -69,6 +69,9 @@ pizzas = [
   }
 ]
 
+
 pizzas.each do |p|
   Pizza.create!(p)
 end
+
+
