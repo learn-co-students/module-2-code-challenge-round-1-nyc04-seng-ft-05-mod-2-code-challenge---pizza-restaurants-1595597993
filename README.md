@@ -61,14 +61,14 @@ Each Restaurant can have many Pizzas. Each Pizza can belong to multiple Restaura
 
 ### 2. Pizza Show Page
 
-There should be a show page for each Pizza. It should display the name and ingredients.
+[x]There should be a show page for each Pizza. It should display the name and ingredients.
 
 ### 3. Restaurant Show Page
 
 There should be a show page for each Restaurant. It should include:
 
-- the Restaurant's name and address
-- a list of the Pizzas it sells
+[x] the Restaurant's name and address
+[ ] a list of the Pizzas it sells
 
 Each pizza in the list should link to that Pizza's show page.
 
