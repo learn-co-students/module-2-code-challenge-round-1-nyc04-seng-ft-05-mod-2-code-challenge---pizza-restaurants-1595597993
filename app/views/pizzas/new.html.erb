@@ -1,0 +1,22 @@
+<h1>New Pizza Form</h1>
+<hr>
+
+<% if @errors %>
+    <% @errors.each do |error| %>
+        <p style="color:red"><%= error %></p>
+    <% end %>
+<% end %>
+
+<%= form_with model: @pizza do |f| %>
+
+  <%= f.label :name   %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :ingredients %>
+  <%= f.text_area :ingredients %>
+  <br>
+  <%= f.label :restaurant_id %>
+  <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name  %>
+
+  <%= f.submit ("New Pizza") %>
+<% end %>
