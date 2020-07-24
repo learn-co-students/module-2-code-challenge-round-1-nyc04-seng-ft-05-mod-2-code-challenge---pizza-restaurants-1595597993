@@ -1,0 +1,11 @@
+<h1>Edit a Restaurant</h1>
+
+<%= form_with model: @restaurant do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<br>
+<%= f.submit "Edit Restaurant" %>
+<% end %>
