@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181129144046) do
+ActiveRecord::Schema.define(version: 20200724143300) do
 
   create_table "pizzas", force: :cascade do |t|
     t.string "name"
     t.string "ingredients"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pizzas_restaurants", id: false, force: :cascade do |t|
+    t.integer "restaurant_id", null: false
+    t.integer "pizza_id", null: false
+    t.integer "pizza"
+    t.integer "restaurant"
+    t.index ["pizza_id", "restaurant_id"], name: "index_pizzas_restaurants_on_pizza_id_and_restaurant_id"
+    t.index ["restaurant_id", "pizza_id"], name: "index_pizzas_restaurants_on_restaurant_id_and_pizza_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
