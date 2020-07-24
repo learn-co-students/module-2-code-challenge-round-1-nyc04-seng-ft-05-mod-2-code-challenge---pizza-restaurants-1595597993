@@ -1,0 +1,27 @@
+<% if @errors %>
+
+  <h2>
+    <%= pluralize(@errors.count, "error") %>
+    prohibited this pizza from being saved:
+  </h2>
+  <ul>
+    <% @errors.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <br>
+<% end %>
+
+
+<%= form_with model: @pizza do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :ingredients %>
+  <%= f.text_field :ingredients %>
+
+  <%= f.label "Restaurant" %>
+  <%= f.collection_select :restaurant_ids, Restaurant.all, :id, :name %>
+  
+  <%= f.submit %>
+<% end %>

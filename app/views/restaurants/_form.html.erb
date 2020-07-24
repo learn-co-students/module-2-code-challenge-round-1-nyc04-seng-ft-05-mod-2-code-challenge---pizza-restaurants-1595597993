@@ -1,0 +1,12 @@
+<%= form_with model: @restaurant do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.label "Check the Pizzas on the Restaurant's menu:" %>
+  <%= f.collection_check_boxes :pizza_ids, Pizza.all, :id, :name %>
+ 
+  <%= f.submit %>
+<% end %>
