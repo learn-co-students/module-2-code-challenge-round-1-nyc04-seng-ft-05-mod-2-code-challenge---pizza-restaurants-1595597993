@@ -1,11 +1,14 @@
 class PizzasController < ApplicationController
+  before_action :set_pizza, only: [:show, :edit, :update, :destroy]
 
   def index
     @pizzas = Pizza.all
   end
 
+  def edit
+  end
+
   def show
-    @pizza = Pizza.find(params[:id])
   end
 
   def new
@@ -13,8 +16,6 @@ class PizzasController < ApplicationController
   end
 
   def create
-
-    @pizza = Pizza.new(pizza_params)
 
     respond_to do |format|
       if @pizza.save
@@ -44,7 +45,7 @@ class PizzasController < ApplicationController
 
   private
     def set_pizza
-      @pizza = pizza.find(params[:id])
+      @pizza = Pizza.find(params[:id])
     end
 
     def pizza_params
