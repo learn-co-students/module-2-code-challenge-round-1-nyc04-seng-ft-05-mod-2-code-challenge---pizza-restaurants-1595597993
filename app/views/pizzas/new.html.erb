@@ -1,0 +1,8 @@
+<%form_for @pizza do |f| %>
+  <%=f.label :name%>
+  <%=f.text_field :name%>
+  <%=f.label :ingredients%>
+  <%=f.text_field :ingredients%>
+  <%= f.select :pizza_id, @pizzas.each { |pizza| car.name } %>
+   <%=f.submit%>
+  <%end%>
