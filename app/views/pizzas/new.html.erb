@@ -1,0 +1,26 @@
+<h1>Create a Pizza</h1>
+
+<% if @pizza.errors.any? %>
+    <h3>Errors Occurred</h3>
+    <ul>
+        <% @pizza.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>
+    <br>
+<% end %>
+
+<%= form_for @pizza do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br><br>
+
+    <%= f.label :ingredients %>
+    <%= f.text_field :ingredients %><br><br>
+
+    <%= f.fields_for :restaurant_pizza do |ff| %>
+        <%= ff.label :restaurant_id %>
+        <%= ff.collection_select :restaurant_id, Restaurant.all, :id, :name %><br><br>
+    <% end %>
+
+    <%= f.submit %>
+<% end %>

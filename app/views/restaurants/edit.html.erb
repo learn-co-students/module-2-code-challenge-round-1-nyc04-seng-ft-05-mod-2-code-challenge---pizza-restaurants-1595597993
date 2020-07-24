@@ -1,0 +1,15 @@
+<h1>Edit a Restaurant</h1>
+<%= form_for @restaurant do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br><br>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %><br><br>
+
+    <h3>Pizzas</h3>
+    <%= f.collection_check_boxes :pizza_ids, Pizza.all, :id, :name %>
+
+    <br>
+    <%= f.submit %>
+    <br><br>
+<% end %>
