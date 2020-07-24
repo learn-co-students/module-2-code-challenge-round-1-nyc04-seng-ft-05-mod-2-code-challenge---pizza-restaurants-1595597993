@@ -76,10 +76,18 @@ pizzas.each do |p|
   Pizza.create!(p)
 end
 
-pizza_res = PizzaRestaurant.create([
+PizzaRestaurant.create([
   {
-    pizza_id: Pizza.first.id,
-    restaurant_id: Restaurant.last.id
+    pizza_id: Pizza.all.sample.id,
+    restaurant_id: Restaurant.all.sample.id
+  },
+  {
+    pizza_id: Pizza.all.sample.id,
+    restaurant_id: Restaurant.all.sample.id
+  },
+  {
+    pizza_id: Pizza.all.sample.id,
+    restaurant_id: Restaurant.all.sample.id
   }
 ])
 
