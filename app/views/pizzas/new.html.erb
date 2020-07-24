@@ -1,0 +1,15 @@
+<h1>New Pizza Form: </h1>
+<%= if @pizza.errors.any? %>
+    <% @pizza.errors.full_message.each do |m|%>
+        Error: <%= m %>
+    <% end%>
+<% end %>
+
+<%= form_for @pizza do |p| %>
+ Name: <%= p.text_field :name %>
+    <br>
+Ingredients: <%= p.text_field :ingredients %>
+    <br>
+<%# Restaurant: <%= p.collection_select :restaurant_id, Restaurant.all, :id, :name %> 
+    <%= p.submit %>
+<% end %>
