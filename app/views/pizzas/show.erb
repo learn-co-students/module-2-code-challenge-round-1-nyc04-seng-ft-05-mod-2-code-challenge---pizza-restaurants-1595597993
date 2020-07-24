@@ -1,3 +1,5 @@
 name:<%= @pizza.name %>
 <br>
 address: <%= @pizza.ingredients %>
+
+<%=button_to "Edit", edit_pizza_path(@pizza) , method: :get%>

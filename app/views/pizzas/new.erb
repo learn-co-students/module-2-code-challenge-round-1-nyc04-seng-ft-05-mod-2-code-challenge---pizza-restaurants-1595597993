@@ -5,12 +5,4 @@
 <% end%>
 
 
-<%= form_for @pizza do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %><br>
-<%= f.label :ingredients %>
-<%= f.text_field :ingredients %><br>
-<%= f.label :restaurant %>
-<%= f.collection_select(:restaurant_ids, Restaurant.all, :id, :name) %>
-<%= f.submit %>
-<% end%>
+<%= render "form" %>
