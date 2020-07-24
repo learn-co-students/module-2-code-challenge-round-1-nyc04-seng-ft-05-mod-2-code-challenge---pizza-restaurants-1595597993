@@ -23,6 +23,9 @@ There are three models in the domain: Restaurant, Pizza, and a join model Restau
 
 Each Restaurant can have many Pizzas. Each Pizza can belong to multiple Restaurants.
 
+
+
+
 ## What You Already Have
 
 The starter code has migrations, models, and seed data for the initial Pizza and Restaurant models. There are routes, controllers and views to support listing Restaurants and Pizzas.
