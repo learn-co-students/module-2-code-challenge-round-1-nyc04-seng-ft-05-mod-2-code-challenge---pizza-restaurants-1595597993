@@ -74,18 +74,18 @@ Each Restaurant can have many Pizzas. Each Pizza can belong to multiple Restaura
 
 ### 4. Restaurants Index Page Links
 
-On the Restaurant index page, each Restaurant's name should link to the restaurant's show page.
+<!-- On the Restaurant index page, each Restaurant's name should link to the restaurant's show page. -->
 
 ### 5. New Pizza Form
 
-Add controller actions and views necessary to show a form to create a new pizza. The form should have:
+<!-- Add controller actions and views necessary to show a form to create a new pizza. The form should have: -->
 
-- an input for the name
+<!-- - an input for the name
 - an input for the ingredients
 - a dropdown to select an existing restaurant
-- a button to save the Pizza
+- a button to save the Pizza -->
 
-After submitting, the user should be redirected to the new Pizza's show page.
+<!-- After submitting, the user should be redirected to the new Pizza's show page. -->
 
 ### 6. Pizza Validation
 

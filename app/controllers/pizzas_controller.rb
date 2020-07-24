@@ -6,5 +6,20 @@ class PizzasController < ApplicationController
   def show
     @pizza = Pizza.find(params[:id])
   end
+
+  def new
+    @pizza = Pizza.new
+  end
+
+  def create
+    @pizza = Pizza.create(pizza_params)
+    redirect_to pizza_path(@pizza)
+  end
+
+private
+
+def pizza_params
+  params.require(:pizza).permit(:name, :ingredients, :id)
+end
   
 end
