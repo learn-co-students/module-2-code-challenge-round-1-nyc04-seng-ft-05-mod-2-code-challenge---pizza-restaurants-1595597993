@@ -55,22 +55,22 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 ### 1. Create the RestaurantPizza Association
 
-Create the join model RestaurantPizza to store the association between Pizzas and Restaurants. Update the schema and models to create the relationship.
+<!-- Create the join model RestaurantPizza to store the association between Pizzas and Restaurants. Update the schema and models to create the relationship.
 
-Each Restaurant can have many Pizzas. Each Pizza can belong to multiple Restaurants.
+Each Restaurant can have many Pizzas. Each Pizza can belong to multiple Restaurants. -->
 
 ### 2. Pizza Show Page
 
-There should be a show page for each Pizza. It should display the name and ingredients.
+<!-- There should be a show page for each Pizza. It should display the name and ingredients. -->
 
 ### 3. Restaurant Show Page
 
-There should be a show page for each Restaurant. It should include:
+<!-- There should be a show page for each Restaurant. It should include: -->
 
-- the Restaurant's name and address
-- a list of the Pizzas it sells
+<!-- - the Restaurant's name and address -->
+<!-- - a list of the Pizzas it sells -->
 
-Each pizza in the list should link to that Pizza's show page.
+<!-- Each pizza in the list should link to that Pizza's show page. -->
 
 ### 4. Restaurants Index Page Links
 
