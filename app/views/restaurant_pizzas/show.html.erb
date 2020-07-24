@@ -1,0 +1,10 @@
+<h1>Restaurant Update Form<h1>
+
+<%=<form_with model:@restaurant do |f|%>
+    <%=f.label :name%>
+    <%=f.text_area :name%>
+    <%=f.label :address%>
+    <%=f.text_area :address%>
+    <%=f.collection_check_boxes :pizza_ids, Pizza.all, :id, :name%>
+    <%=f.submit%>
+<%end%>
