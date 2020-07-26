@@ -1,13 +1,17 @@
-<h1>Restaurant Show Page</h1>
+<!--The Restaurant show page should show:
+a link to edit page
+restaurant name
+address
+a list of the pizzas it sells. Each pizza should link to that Pizza's show page-->
 
-<h2><%=@restaurant.name%></h2>
+<%= link_to "Edit", edit_restaurant_path %>
 
-<h2><%=@restaurant.address%></h2>
+<h1><%= @restaurant.name %></h1>
+
+<%= @restaurant.address %>
 
 <ul>
-<%@restaurant.pizzas.each do |pizza|%>
-    <li><%=link_to pizza.name, pizza_path(pizza)%></li>
- <%end%>
+<% @restaurant.pizzas.each do |pizza| %>
+    <li><%= link_to pizza.name, pizza %></li>
+ <% end %>
  </ul>
-
- <%+ link_to "Edit", edit_restaurant_path%>

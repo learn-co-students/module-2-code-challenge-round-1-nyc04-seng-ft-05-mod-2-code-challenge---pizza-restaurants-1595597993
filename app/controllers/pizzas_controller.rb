@@ -1,4 +1,5 @@
 class PizzasController < ApplicationController
+
   def index
     @pizzas = Pizza.all
   end
@@ -7,6 +8,7 @@ class PizzasController < ApplicationController
     @pizza = Pizza.find(params[:id])
   end
 
+  # Add error handling:
   def new
     @pizza = Pizza.new
     @errors = flash[:errors]
@@ -15,18 +17,18 @@ class PizzasController < ApplicationController
   def create
     pizza = Pizza.create(pizza_params)
     if pizza.valid?
-      redirect_to pizza_path(pizza)
+      redirect_to pizza
     else
       flash[:errors] = pizza.errors.full_messages
-      render :new
+      redirect_to new_pizza_path
     end
   end
 
-  private
-
+  # To create association for the Restaurant selected in New Pizza Form:
+  # define setter restaurant_id= in Pizza model
+  # add restaurant_id to pizza_params
   def pizza_params
-    params.require(:pizza).permit(:name, :ingredients)
+    params.require(:pizza).permit(:name, :ingredients, :restaurant_id)
   end
 
-  
 end
