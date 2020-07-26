@@ -1,0 +1,21 @@
+<!--New Pizza form should have:
+an input for the name
+an input for the ingredients
+a dropdown to select an existing restaurant
+a button to save the Pizza-->
+
+<%= form_with model:@pizza do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :ingredients %>
+    <%= f.text_field :ingredients %>
+    <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
+    <%= f.submit %>
+<% end %>
+
+<!--Show validation errors-->
+<% if @errors %>
+    <% @errors.each do |error| %>
+        <p style="color:red"><%= error %></p>
+    <% end %>
+<% end %>
