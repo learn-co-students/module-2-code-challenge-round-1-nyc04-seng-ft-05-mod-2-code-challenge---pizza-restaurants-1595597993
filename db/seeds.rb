@@ -8,7 +8,10 @@
 #
 #   1
 Restaurant.destroy_all
+Pizza.destroy_all
+PizzaRestaurant.destroy_all
  
+puts "starting seeding...."
 restaurants = [{
   name: "Sottocasa NYC",
   address: "298 Atlantic Ave, Brooklyn, NY 11201",
@@ -72,3 +75,20 @@ pizzas = [
 pizzas.each do |p|
   Pizza.create!(p)
 end
+
+PizzaRestaurant.create([
+  {
+    pizza_id: Pizza.all.sample.id,
+    restaurant_id: Restaurant.all.sample.id
+  },
+  {
+    pizza_id: Pizza.all.sample.id,
+    restaurant_id: Restaurant.all.sample.id
+  },
+  {
+    pizza_id: Pizza.all.sample.id,
+    restaurant_id: Restaurant.all.sample.id
+  }
+])
+
+puts "Done seeding!!"

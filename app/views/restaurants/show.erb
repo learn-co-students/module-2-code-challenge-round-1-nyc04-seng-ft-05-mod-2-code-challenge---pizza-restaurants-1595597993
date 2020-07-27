@@ -1,0 +1,10 @@
+<h1>Restaurant: <%= @restaurant.name%> </h1>
+<hr>
+<h3>Address: <%= @restaurant.address%>
+
+<% @restaurant.pizzas.each do |pizza_instance|%>
+    <li> 
+    <%=pizza_instance.ingredients%>
+    </li>
+
+    <%end%>
